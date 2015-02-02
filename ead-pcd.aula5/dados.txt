@@ -1,0 +1,2 @@
+Java permite acesso a arquivos.
+Fabiano dos Santos Mendes

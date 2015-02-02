@@ -1,0 +1,11 @@
+27/12/2014 13:07:25 || O aluno 100-Fabiano foi adicionado.
+27/12/2014 13:07:56 || O aluno 101-Erika foi adicionado.
+27/12/2014 13:08:15 || Aluno 102 não encontrado!
+27/12/2014 13:08:24 || Aluno 102 não encontrado!
+27/12/2014 13:08:50 || O aluno 101-Erika foi removido.
+27/12/2014 13:08:54 || Salvando dados no arquivo...
+27/12/2014 13:08:54 || Dados gravados no arquivo F:\Developer\projetos\git\ead-pcd.aula5\alunos.cdt
+27/12/2014 13:09:13 || Carregando dados do arquivo F:\Developer\projetos\git\ead-pcd.aula5\alunos.cdt
+27/12/2014 13:09:13 || Aluno 100-Fabiano carregado.
+27/12/2014 13:09:17 || Salvando dados no arquivo...
+27/12/2014 13:09:17 || Dados gravados no arquivo F:\Developer\projetos\git\ead-pcd.aula5\alunos.cdt
