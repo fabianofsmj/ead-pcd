@@ -3,6 +3,10 @@ package br.com.ead_pcd.aula12.video12;
 import javax.persistence.*;
 
 @Entity
+@NamedQueries({
+	@NamedQuery(name="empregadoSalarioMaiorMil", query="SELECT e FROM Empregado e WHERE e.salario > 1000"),
+	@NamedQuery(name="empregadoSalarioEntre500E1000", query="SELECT e FROM Empregado e WHERE e.salario BETWEEN 500 AND 1000")
+})
 public class Empregado {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)

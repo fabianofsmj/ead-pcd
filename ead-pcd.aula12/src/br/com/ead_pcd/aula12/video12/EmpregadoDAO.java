@@ -1,5 +1,7 @@
 package br.com.ead_pcd.aula12.video12;
 
+import java.util.List;
+
 import javax.persistence.*;
 
 public class EmpregadoDAO implements DAOGenerico {
@@ -81,6 +83,32 @@ public class EmpregadoDAO implements DAOGenerico {
 			e.printStackTrace();
 			return false;
 		}
+	}
+	
+	public List<Empregado> executaJPQL() {
+		List<Empregado> empregados = null;
+		
+		try {
+			EntityManagerFactory factory = Persistence.createEntityManagerFactory(null);
+			EntityManager em = factory.createEntityManager();
+			em.getTransaction().begin();
+			
+			// ######## IMPLEMENTAÇÃO ESPECÍFICA DE EXECUÇÃO JPQL ########
+/*			Query query = em.createQuery("SELECT e FROM Empregado e WHERE e.salario > 1000");
+			empregados = (List<Empregado>) query.getResultList();
+*/			
+/*			empregados = em.createNamedQuery("empregadoSalarioMaiorMil").getResultList();
+ */
+			empregados = em.createNamedQuery("empregadoSalarioEntre500E1000").getResultList();
+			// ######## IMPLEMENTAÇÃO ESPECÍFICA DE EXECUÇÃO JPQL ########
+			
+			em.getTransaction().commit();
+			em.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+		return (empregados);
 	}
 
 }
