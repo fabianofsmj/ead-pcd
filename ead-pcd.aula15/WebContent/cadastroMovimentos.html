@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Sistema de Gestão Financeira</title>
+</head>
+<body>
+	<h1>Cadastro de Movimentos</h1>
+	<p align="right"><a href="index.html">Voltar</a></p>
+	<form method="post" action="#">
+		<p>
+			Movimento: 
+			<select name="movimento">
+				<option>Lista de Movimentos</option>
+			</select>
+		</p>
+		<p>
+			Usuário: 
+			<select name="usuario">
+				<option>Lista de Usuários</option>
+			</select>
+			Categoria: 
+			<select name="categoria">
+				<option>Lista de Categorias</option>
+			</select>
+		</p>
+		<p>
+			Data Movimento: <input type="date" name="dataMovimento"/>
+			Tipo Movimento: 
+			<input type="radio" name="tipoMovimento" value="debito"> Débito
+			<input type="radio" name="tipoMovimento" value="credito"> Crédito
+		</p>
+		<p>
+			Valor: <input type="text" name="valor">
+			Comentários: <textarea name="comentario" rows="5" cols="50"></textarea>
+		</p>
+		<p>
+			<input type="submit" name="pesquisar" value="Pesquisar"/>
+			| <a href="#" name="incluir">Incluir</a>
+			| <a href="#" name="salvar">Salvar</a>
+			| <a href="#" name="Excluir">Excluir</a>
+		</p>
+	</form>			
+</body>
+</html>
