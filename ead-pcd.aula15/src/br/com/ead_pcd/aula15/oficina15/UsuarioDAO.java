@@ -3,6 +3,7 @@ package br.com.ead_pcd.aula15.oficina15;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.TypedQuery;
 
 public class UsuarioDAO implements DAOGenerico {
 
@@ -75,5 +76,17 @@ public class UsuarioDAO implements DAOGenerico {
 		em.getTransaction().commit();
 		em.close();
 		return (usuario);
+	}
+	
+	public Object buscarPorLogin(String login) {
+		EntityManagerFactory factory = Persistence.createEntityManagerFactory(null);
+		EntityManager em = factory.createEntityManager();
+		em.getTransaction().begin();
+		
+		TypedQuery<Usuario> query = em.createQuery("SELECT u from Usuario AS u WHERE u.login = :login", Usuario.class); 
+		query.setParameter("login", login);
+		
+		em.getTransaction().commit();
+		return query.getSingleResult();
 	}
 }
